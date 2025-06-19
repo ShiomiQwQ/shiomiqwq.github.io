@@ -35,5 +35,11 @@
     <p>GitHubの爆破により、</p>
     <p>一時的にウェブサイトにアクセスできない状態となっております。</p>
     <p>またのごアクセスをお待ちしております。</p>
+    <script type="text/javascript">
+  if (window.location.protocol === 'http:') {
+    var httpsUrl = 'https://' + window.location.host + window.location.pathname + window.location.search + window.location.hash;
+    window.location.href = httpsUrl;
+  }
+</script>
 </body>
 </html>
