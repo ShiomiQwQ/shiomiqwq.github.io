@@ -1,0 +1,10 @@
+# Hi Spiders!
+User-agent: *
+Disallow: /jbjfunny/
+Disallow: /douga/
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
