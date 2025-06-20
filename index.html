@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>502 Bad Gateway...</title>
+    <title>502 Bad Gateway?</title>
     <style>
         @font-face {
             font-family: 'XCFont';
@@ -36,6 +36,9 @@
     <p>GitHubの爆破により、</p>
     <p>一時的にウェブサイトにアクセスできない状態となっております。</p>
     <p>またのごアクセスをお待ちしております。</p>
+    <p>現在、</p>
+    <p>このウェブページの新しいインターフェースを開発中です。
+    <p>どうぞお楽しみに。</p>
     <script type="text/javascript">
   if (window.location.protocol === 'http:') {
     var httpsUrl = 'https://' + window.location.host + window.location.pathname + window.location.search + window.location.hash;
@@ -43,23 +46,23 @@
   }
       </script>
         <script>
-      const originalTitle = document.title;
-        const hiddenTitle = "行かないで、早く戻ってきてね〜"
-        const visibleTitle = "おかえりなさいᕕ(◠ڼ◠)ᕗ"
-
+        const originalTitle = document.title;
+        const hiddenTitle = "行かないで、早く戻ってきてね〜";
+        const visibleTitle = "おかえりなさいᕕ(◠ڼ◠)ᕗ";
+        
         let titleTimer;
-
+        
         document.addEventListener('visibilitychange', function() {
             if (document.hidden) {
                 clearTimeout(titleTimer);
-                document = hiddenTitle;
+                document.title = hiddenTitle;
             } else {
                 document.title = visibleTitle;
-                titleTimer = settimeout(function) {
+                titleTimer = setTimeout(function() {
                     document.title = originalTitle;
                 }, 2000);
             }
         });
-</script>
+        </script>
 </body>
 </html>
