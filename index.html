@@ -5,26 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>502 Bad Gateway?</title>
     <style>
-        @font-face {
-            font-family: 'XCFont';
-            src: url('xc.ttf') format('truetype');
-        }
-        body {
-            background-color: black;
-            color: white;
-            font-family: 'XCFont', sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            line-height: 1.6;
-        }
-        p {
-            margin: 0.5em 0;
-        }
+   <head>
+  <link rel="preload" href="font.woff2" as="font" type="font/xc" crossorigin>
+  <style>
+    @font-face {
+      font-family: 'XCFont';
+      src: url('xc') format('xc');
+    }
     </style>
     <link rel="shortcut icon" href="https://shiomi.xyz/favicon.ico">
 </head>
@@ -39,7 +26,6 @@
     <p>現在、</p>
     <p>このウェブページの新しいインターフェースを開発中です。
     <p>どうぞお楽しみに。</p>
-    <p>ちなみに、</p>
     <p>ウェブクローラーへの一言、</p>
     <p>WordPressには興味がない。</p>
     <p>今後も使う予定はありません。</p>
