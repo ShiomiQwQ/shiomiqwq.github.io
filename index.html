@@ -50,20 +50,20 @@
     window.location.href = httpsUrl;
   }
       </script>
-        <script>
-      const originalTitle = document.title;
-        const hiddenTitle = "行かないで、早く戻ってきてね〜"
-        const visibleTitle = "おかえりなさいᕕ(◠ڼ◠)ᕗ"
-
+    <script>
+        const originalTitle = document.title;
+        const hiddenTitle = "行かないで、早く戻ってきてね〜";
+        const visibleTitle = "おかえりなさいᕕ(◠ڼ◠)ᕗ";
+        
         let titleTimer;
-
+        
         document.addEventListener('visibilitychange', function() {
             if (document.hidden) {
                 clearTimeout(titleTimer);
-                document = hiddenTitle;
+                document.title = hiddenTitle;
             } else {
                 document.title = visibleTitle;
-                titleTimer = settimeout(function) {
+                titleTimer = setTimeout(function() {
                     document.title = originalTitle;
                 }, 2000);
             }
