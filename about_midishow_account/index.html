@@ -100,5 +100,30 @@
       所以如果有什么事需要找上我，请联系我的邮箱:admin@shiomi.xyz。这里不经常看了。
       以上。
     </div>
+        <script type="text/javascript">
+  if (window.location.protocol === 'http:') {
+    var httpsUrl = 'https://' + window.location.host + window.location.pathname + window.location.search + window.location.hash;
+    window.location.href = httpsUrl;
+  }
+      </script>
+    <script>
+        const originalTitle = document.title;
+        const hiddenTitle = "不要走，快回来ε=ε=ヾ(;ﾟдﾟ)/";
+        const visibleTitle = "欢迎肥来ᕕ(◠ڼ◠)ᕗ";
+        
+        let titleTimer;
+        
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                clearTimeout(titleTimer);
+                document.title = hiddenTitle;
+            } else {
+                document.title = visibleTitle;
+                titleTimer = setTimeout(function() {
+                    document.title = originalTitle;
+                }, 2000);
+            }
+        });
+</script>
 </body>
 </html>
