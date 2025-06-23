@@ -32,9 +32,10 @@
 
         .header {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
+            padding: 0 40px;
             position: relative;
         }
 
@@ -43,19 +44,25 @@
             text-transform: uppercase;
             text-align: center;
             font-size: 24px;
-            flex-grow: 1;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: fit-content;
+            pointer-events: none;
         }
 
         .left-container {
             display: flex;
             align-items: center;
-            position: absolute;
-            left: 0;
+            width: 30%;
+            justify-content: flex-start;
         }
 
-        .right-text {
-            position: absolute;
-            right: 0;
+        .right-container {
+            display: flex;
+            justify-content: flex-end;
+            width: 30%; /* 控制右侧区域宽度 */
         }
 
         .sub-text {
@@ -63,6 +70,7 @@
             color: #999;
             font-size: 14px;
             margin-left: 10px;
+            white-space: nowrap;
         }
 
         hr {
