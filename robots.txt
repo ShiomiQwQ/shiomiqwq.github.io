@@ -2,6 +2,7 @@
 User-agent:*
 Disallow: /jbjfunny/
 Disallow: /douga/
+Disallow: /about_midishow_account/
 
 User-agent: Baiduspider
 Disallow: /
