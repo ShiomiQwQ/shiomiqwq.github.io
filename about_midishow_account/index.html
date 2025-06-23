@@ -43,7 +43,7 @@
     </noscript>
 
     <script>
-        // 主内容
+        // 主内容放在这里，只有启用JavaScript的用户才能看到
         document.write(`
             <style>
                 .noscript-message {
@@ -54,7 +54,9 @@
         
         // 这里是网站的正常内容
         document.addEventListener('DOMContentLoaded', function() {
-<!DOCTYPE html>
+            // ===== 在这里插入正常的网页代码 =====
+            document.body.innerHTML += `
+            <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -197,6 +199,8 @@
 </script>
 </body>
 </html>
+            `;
+            // ===== 正常网页代码结束 =====
         });
     </script>
 </body>
