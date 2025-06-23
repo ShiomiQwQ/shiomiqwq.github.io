@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>需要JavaScript支持</title>
+    <title>关于MidiShow账号的说明</title>
     <noscript>
         <style>
             body {
@@ -29,39 +29,17 @@
                 color: #dc3545;
                 margin-top: 0;
             }
+            @media (prefers-color-scheme: dark) {
+                body {
+                    background-color: #121212;
+                }
+                .noscript-message {
+                    background-color: #1e1e1e;
+                    color: #e0e0e0;
+                }
+            }
         </style>
     </noscript>
-</head>
-<body>
-    <noscript>
-        <div class="noscript-message">
-            <h1>您似乎没有开启JavaScript</h1>
-            <p>请开启JavaScript以获得更好的浏览体验。</p>
-            <p>否则，您将无法访问此网站。</p>
-            <p>谢谢。</p>
-        </div>
-    </noscript>
-
-    <script>
-        // 主内容放在这里，只有启用JavaScript的用户才能看到
-        document.write(`
-            <style>
-                .noscript-message {
-                    display: none;
-                }
-            </style>
-        `);
-        
-        // 这里是网站的正常内容
-        document.addEventListener('DOMContentLoaded', function() {
-            // ===== 在这里插入正常的网页代码 =====
-            document.body.innerHTML += `
-            <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于MidiShow账号的说明</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -151,34 +129,50 @@
 </style>
 </head>
 <body>
-    <div class="header">
-        <div class="left-container">
-            <img src="clock.svg" alt="时钟图标" width="24" height="24">
-            <span class="sub-text">最后编辑于 2025-06-23 05:27:04 UTC+0</span>
+    <noscript>
+        <div class="noscript-message">
+            <h1>您似乎没有开启JavaScript</h1>
+            <p>请开启JavaScript以获得更好的浏览体验。</p>
+            <p>否则，您将无法访问此网站。</p>
+            <p>谢谢。</p>
         </div>
-        <div class="title">关于MidiShow账号的说明</div>
-        <div class="right-text">
-            <span class="sub-text">编者：Admin</span>
+    </noscript>
+
+    <div id="main-content" style="display: none;">
+        <div class="header">
+            <div class="left-container">
+                <img src="clock.svg" alt="时钟图标" width="24" height="24">
+                <span class="sub-text">最后编辑于 2025-06-23 05:27:04 UTC+0</span>
+            </div>
+            <div class="title">关于MidiShow账号的说明</div>
+            <div class="right-text">
+                <span class="sub-text">编者：Admin</span>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            由于此账号原号主不再有精力去经营，又苦于积分太多花不完。因此交由我的几个志同道合且比较信任好友共同使用并制定了此账号的使用规则：
+          禁止随意在MIDI评论区大小便。
+          严禁在站内信中骚扰他人。
+          可以上传MIDI，但禁止上传低质MIDI以及未经修正的MIDI。
+          所以如果有什么事需要找上我，请联系我的邮箱:admin@shiomi.xyz。这里不经常看了。
+          以上。
         </div>
     </div>
 
-    <hr>
-
-    <div class="footer">
-        由于此账号原号主不再有精力去经营，又苦于积分太多花不完。因此交由我的几个志同道合且比较信任好友共同使用并制定了此账号的使用规则：
-      禁止随意在MIDI评论区大小便。
-      严禁在站内信中骚扰他人。
-      可以上传MIDI，但禁止上传低质MIDI以及未经修正的MIDI。
-      所以如果有什么事需要找上我，请联系我的邮箱:admin@shiomi.xyz。这里不经常看了。
-      以上。
-    </div>
-        <script type="text/javascript">
-  if (window.location.protocol === 'http:') {
-    var httpsUrl = 'https://' + window.location.host + window.location.pathname + window.location.search + window.location.hash;
-    window.location.href = httpsUrl;
-  }
-      </script>
     <script>
+        // 显示主内容
+        document.getElementById('main-content').style.display = 'block';
+        
+        // HTTP 跳转到 HTTPS
+        if (window.location.protocol === 'http:') {
+            var httpsUrl = 'https://' + window.location.host + window.location.pathname + window.location.search + window.location.hash;
+            window.location.href = httpsUrl;
+        }
+
+        // 页面标题变化效果
         const originalTitle = document.title;
         const hiddenTitle = "不要走，快回来ε=ε=ヾ(;ﾟдﾟ)/";
         const visibleTitle = "欢迎肥来ᕕ(◠ڼ◠)ᕗ";
@@ -195,12 +189,6 @@
                     document.title = originalTitle;
                 }, 2000);
             }
-        });
-</script>
-</body>
-</html>
-            `;
-            // ===== 正常网页代码结束 =====
         });
     </script>
 </body>
