@@ -3,6 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>需要JavaScript支持</title>
+    <noscript>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f8f9fa;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                text-align: center;
+            }
+            .noscript-message {
+                background-color: white;
+                padding: 2rem;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                max-width: 600px;
+                margin: 1rem;
+            }
+            h1 {
+                color: #dc3545;
+                margin-top: 0;
+            }
+        </style>
+    </noscript>
+</head>
+<body>
+    <noscript>
+        <div class="noscript-message">
+            <h1>您似乎没有开启JavaScript</h1>
+            <p>请开启JavaScript以获得更好的浏览体验。</p>
+            <p>否则，您将无法访问此网站。</p>
+            <p>谢谢。</p>
+        </div>
+    </noscript>
+
+    <script>
+        // 主内容
+        document.write(`
+            <style>
+                .noscript-message {
+                    display: none;
+                }
+            </style>
+        `);
+        
+        // 这里是网站的正常内容
+        document.addEventListener('DOMContentLoaded', function() {
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>关于MidiShow账号的说明</title>
 <style>
     body {
@@ -139,5 +195,9 @@
             }
         });
 </script>
+</body>
+</html>
+        });
+    </script>
 </body>
 </html>
