@@ -1,0 +1,9 @@
+.logininfo{
+    display: block;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    color: white;
+    font-size: 17px;
+    text-shadow: rgb(0 0 0 / 25%) 0 5px 10px;
+}
