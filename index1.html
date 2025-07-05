@@ -1,0 +1,208 @@
+
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv='content-language' content='zh'>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<title>Shiomi Cafe</title>
+<link href="css/light.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
+<link href="css/info.css" rel="stylesheet" type="text/css">
+<link href="css/time.css" rel="stylesheet" type="text/css">
+<link href="css/news.css" rel="stylesheet" type="text/css">
+<link href="css/font.css" rel="stylesheet" type="text/css">
+<!--<link href="css/from_otm.css" rel="stylesheet" type="text/css">-->
+<link href="css/pop.css" rel="stylesheet" type="text/css">
+<link href="css/login.css" rel="stylesheet" type="text/css">
+<link href="css/otomadwiki_content.css" rel="stylesheet" type="text/css">
+<script src="js/tool_1.js"></script>
+<script src="js/search.js"></script>
+<script src="js/banner.js"></script>
+<script src="https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body class="mdui-theme-layout-auto">
+	<!-- <div href="https://otomad.wiki/街角魔族" class="pop-left banner-hover banner-show" onclick="banner_herf(this);">
+		<img class="left-banner" src="image/left-banner.webp" />
+	</div>
+	<div href="https://otomad.wiki/街角魔族" class="pop-right banner-hover banner-show" onclick="banner_herf(this);">
+		<img class="right-banner" src="image/right-banner.webp" />
+	</div>-->
+	<div class="mdui-dialog desc" id="desc">
+		<img class="biglogo" src="logo/otmink.svg" />
+		<h1 style="text-align: center;"></h1>
+		<h2>关于 天气</h2>
+		<p>网站的天气部分由 和风天气 提供。</p>
+		<h2>关于 壁纸</h2>
+		<p>网站的壁纸为每日 Bing 壁纸。</p>
+		<br />
+	</div>
+	<div class="time-box">
+		<div class="time" id="timing">00:00<span class="small-sec">:00</span></div>
+	</div>
+	<div class="search-box">
+		<div class="search-inbox">
+			<div class="search-engine mdui-ripple">
+				<select class="search-logo" id="search_engine" onchange="search_engine_logo()">
+					<option value="baidu">百度</option>
+					<option value="bing">必应</option>
+					<option value="google">谷歌</option>
+					<option value="miao">喵御宅</option>
+					<option value="bilibili">哔哩哔哩</option>
+					<option value="acfun">Acfun</option>
+					<option value="niconico">Niconico</option>
+					<option value="youtube">YouTube</option>
+					<option value="otomadwiki">音MAD中文维基</option>
+				</select>
+				<div id="display_logo" class="display-logo" style="-webkit-mask-image: url('logo/baidu.svg');"></div>
+			</div>
+			<input class="search" id="search" placeholder="不如来冲个浪 ~（￣▽￣）" onkeydown = "ifEnter(event);">
+			<div class="search-button mdui-ripple" onclick="search()">
+				<i class="mdui-icon material-icons search-icon">&#xe8b6;</i>
+			</div>
+		</div>
+	</div>
+	<div class="info">
+		<div class="mobile-show">
+			<div class="info-box resource-box">
+				<h2>快速导航</h2>
+				<div class='fastitem'>
+          <a class='link' href='https://shiomi.xyz/freemp3'>音乐下载</a>
+				</div>
+				<div class='fastitem'>
+          <a class='link' href='https://shiomi.xyz/srev'>日本地震监测（暂未开放)</a>
+				</div>
+				<div class='fastitem'>
+          <a class='link' href='https://shiomi.xyz/111'>test</a>
+				</div>
+				<div class='fastitem'>
+          <a class='link' href='https://s.otm.ink/tutorial'>test1</a>
+				</div>
+			</div>
+		</div>
+		<div class="info-box new-event-box">
+			<div id="new_event" class="new-event">
+			</div>
+		</div>
+	</div>
+		<div class="info">
+			<div class="info-box weather-box">
+			<div id="he-plugin-standard"></div>
+				<script>
+					WIDGET = {
+					"CONFIG": {
+						"layout": "1",
+						"width": "450",
+						"height": "150",
+						"background": "5",
+						"dataColor": "000000",
+						"key": "f1cce676a49b466d8774580ba23bce3b"
+					}
+					}
+				</script>
+				<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
+			</div>
+			<div class="info-box tool-out">
+				<h2 style="flex: none;width: 30px;margin: auto;margin-right: 5px;">导航栏</h2>
+				<div class="tool-box">
+				    <div class="tool-box-one">
+    				    <p><i class="mdui-icon material-icons">&#xe63a;</i> <a class="link-up" href="https://bilibili.com/">哔哩哔哩</a></p>
+        				<p><i class="mdui-icon material-icons">&#xe63a;</i> <a class="link-up" href="https://www.acfun.cn/">Acfun</a></p>
+        				<p><i class="mdui-icon material-icons">&#xe63a;</i> <a class="link-up" href="https://www.mfuns.net/">喵御宅</a></p>
+        				<p><i class="mdui-icon material-icons">&#xe63a;</i> <a class="link-up" href="https://nicovideo.jp/">Niconico</a></p>
+        				<p><i class="mdui-icon material-icons">&#xe63a;</i> <a class="link-up" href="https://youtube.com/">YouTube</a></p>
+        			</div>
+					<div class="tool-box-one">
+					    <p><i class="mdui-icon material-icons">&#xe63a;</i> <a class="link-up" href="https://ottomania.ottomad.com">OTTOMANIA 2023</a></p>
+						<p><i class="mdui-icon material-icons">&#xe405;</i> <a class="link-up" href="https://www.midishow.com/">MidiShow</a></p>
+						<p><i class="mdui-icon material-icons">&#xe405;</i> <a class="link-up" href="http://keygenmusic.net/">KeyGenMusic</a></p>
+					</div>
+					<div class="tool-box-one">
+						<p><i class="mdui-icon material-icons">&#xe02f;</i> <a class="link-up" href="https://zh.moegirl.org.cn/Mainpage">萌娘百科</a></p>
+						<p><i class="mdui-icon material-icons">&#xe02f;</i> <a class="link-up" href="https://thwiki.cc/">THBWiki</a></p>
+						<p><i class="mdui-icon material-icons">&#xe02f;</i> <a class="link-up" href="https://otomad.wiki/">音MAD中文维基</a></p>
+						<p><i class="mdui-icon material-icons">&#xe02f;</i> <a class="link-up" href="https://tieba.baidu.com/f?kw=%D2%F4mad">音MAD百度贴吧</a></p>
+					</div>
+					<div class="tool-box-one">
+						<p><i class="mdui-icon material-icons">&#xe43a;</i> <a class="link-up" href="https://www.lookae.com/">LookAE</a></p>
+						<p><i class="mdui-icon material-icons">&#xe884;</i> <a class="link-up" href="https://s.otm.ink/airasoft">艾拉软件库</a></p>
+					</div>
+					<div class="tool-box-one">
+						<p><i class="mdui-icon material-icons">&#xe262;</i> <a class="link-up" href="https://www.freejapanesefont.com/">Free Japanese Font</a></p>
+					</div>
+					<div class="tool-box-one">
+						<p><i class="mdui-icon material-icons">&#xe30f;</i> <a class="link-up" href="https://medle.0-th.art/">Medle</a></p>
+						<p><i class="mdui-icon material-icons">&#xe30f;</i> <a class="link-up" href="https://medle.akashiya.top/">TOUHOU Medle</a></p>
+						<p><i class="mdui-icon material-icons">&#xe30f;</i> <a class="link-up" href="https://medle.phystack.top/">VOCALO Medle</a></p>
+					</div>
+					<div class="tool-box-one">
+						<p><i class="mdui-icon material-icons">&#xe8b6;</i> <a class="link-up" href="https://trace.moe/">TraceMoe</a></p>
+					</div>
+					<div class="tool-box-one">
+						<p><i class="mdui-icon material-icons">&#xe030;</i> <a class="link-up" href="https://vocalremover.org/">VocalRemover</a></p>
+					</div>
+					<!--<div class="tool-box-one">-->
+					<!--	<p><i class="mdui-icon material-icons">&#xe051;</i> <a class="link-up" href="https://badonpa.cn/">Badonpa</a></p>-->
+					<!--</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="info">
+			<div class="info-box">
+				<div class="tool-1">
+					<div class="tool-title">BV / av 互换</div>
+					<input class="input-tool-1" id="input_tool_1" placeholder="在此输入 av 或 BV 号" onkeydown = "ifEnter_tool_1(event);">
+					<div class="tool-button mdui-ripple" onclick="query_tool_1()">
+						<i class="mdui-icon material-icons tool-button-icon">&#xe028;</i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="info">
+			<div class="info-box">
+				<div id="in_related_work">
+				</div>
+			</div>
+		</div>
+		<!--<div class="info">-->
+		<!--	<div class="info-box">-->
+		<!--		<div id="related_work">-->
+		<!--			<div class="tool-button mdui-ripple tool-help" mdui-dialog="{target: '#rela_help'}">-->
+		<!--				<i class="mdui-icon material-icons tool-button-icon">&#xe8fd;</i>-->
+		<!--			</div>-->
+		<!--			<div class="back_text">-->
+		<!--				<span>作品推荐</span>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--		<div class="rel_link">-->
+		<!--			<a class="rel_link_button" href="https://s.otm.ink/rec"><i class="mdui-icon material-icons">&#xe838;</i> 推荐作品</a>-->
+		<!--		</div>-->
+		<!--	</div>-->
+		<!--</div>-->
+		<!--<div class="info">-->
+		<!--	<div class="info-box">-->
+		<!--		<a name="ciritic"></a>-->
+		<!--		<div id="ciritic_work">-->
+		<!--			<div class="tool-button mdui-ripple tool-help" mdui-dialog="{target: '#ciri_help'}">-->
+		<!--				<i class="mdui-icon material-icons tool-button-icon">&#xe8fd;</i>-->
+		<!--			</div>-->
+		<!--			<div class="back_text">-->
+		<!--				<span>批评建议</span>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--	</div>-->
+		<!--</div>-->
+	</div>
+	<img id="background" class="background" src="bing.php" />
+<script src="js/background.js"></script>
+<script src="js/show_time.js"></script>
+<script src="js/otomadwiki_widget.js"></script>
+<script src="js/special_message.js"></script>
+<script src="js/from_otomadwiki.js"></script>
+<!--<script src="js/from_otm.js"></script>-->
+</body>
+</html>
