@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv='content-language' content='zh'>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-<title>Shiomi Cafe</title>
+<title>Shiomi Cafe v1.0</title>
 <link href="css/light.css" rel="stylesheet" type="text/css">
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <link href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
@@ -203,5 +203,24 @@
 <script src="js/special_message.js"></script>
 <script src="js/from_otomadwiki.js"></script>
 <!--<script src="js/from_otm.js"></script>-->
+	<script>
+	const originalTitle = document.title;
+        const hiddenTitle = "不要走，快回来ε=ε=ヾ(;ﾟдﾟ)/";
+        const visibleTitle = "欢迎肥来ᕕ(◠ڼ◠)ᕗ";
+        
+        let titleTimer;
+        
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                clearTimeout(titleTimer);
+                document.title = hiddenTitle;
+            } else {
+                document.title = visibleTitle;
+                titleTimer = setTimeout(function() {
+                    document.title = originalTitle;
+                }, 2000);
+            }
+        });
+	</script>
 </body>
 </html>
