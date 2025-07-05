@@ -1,0 +1,28 @@
+.pop-left{
+    position: fixed;
+    height: 80%;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.pop-right{
+    position: fixed;
+    height: 80%;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+.left-banner{
+    height: 100%;
+}
+.right-banner{
+    height: 100%;
+}
+.banner-hover{
+    transform: scale(1);
+    transition: all 0.1s;
+}
+.banner-hover:hover{
+    transform: scale(1.05);
+}
