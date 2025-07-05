@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+.news-img {
+	height: 100px;
+	float: left;
+	margin: 0 10px 5px 0;
+	border-radius: 10px;
+}
