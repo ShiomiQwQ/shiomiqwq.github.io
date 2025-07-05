@@ -1,0 +1,21 @@
+:root {
+    --main-text-color: rgba(0,0,0,.87); 
+    --main-back-color: rgba(255,255,255,.7);
+    --main-body-color: #fff;
+    --main-image-color: rgba(255,255,255,.5);
+    --main-back-color-focus: rgba(255,255,255,.9);
+    --main-add-border-color: rgba(0,0,0,0.25);
+    --black-logo: brightness(0);
+    --main-round: 12px;
+}
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --main-text-color: rgba(255,255,255,.87); 
+        --main-back-color: rgba(0,0,0,.7);
+        --main-body-color: #000;
+        --main-image-color: rgba(0,0,0,.5);
+        --main-back-color-focus: rgba(0,0,0,.9);
+        --main-add-border-color: rgba(255,255,255,0.25);
+        --black-logo: brightness(100);
+    }
+}
