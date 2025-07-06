@@ -5,6 +5,7 @@ Disallow: /douga/
 Disallow: /about_midishow_account/
 Disallow: /js/
 Disallow: /css/
+Disallow: /logo/
 
 User-agent: Baiduspider
 Disallow: /
