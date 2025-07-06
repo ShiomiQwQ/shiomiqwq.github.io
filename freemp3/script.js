@@ -293,7 +293,7 @@ document.addEventListener('click', async (e) => {
             previewDiv.innerHTML = `
                 <div class="bg-white p-4 rounded shadow-lg border">
                     <audio controls autoplay src="${songUrl}" class="w-full mt-2"></audio>
-                    <button class="close-preview mt-2 bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">鍏抽棴</button>
+                    <button class="close-preview mt-2 bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">取消</button>
                 </div>
             `;
             previewDiv.querySelector('.close-preview').addEventListener('click', () => {
