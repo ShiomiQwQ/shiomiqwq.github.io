@@ -92,46 +92,6 @@
 					}
 					}
 				<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
-				</script>
-					<div id="cookie-banner" style="
-					display: none;
-					position: fixed;
-					bottom: 20px;
-					left: 50%;
-					transform: translateX(-50%);
-					background: rgba(0,0,0,0.85);
-					color: #fff;
-					padding: 16px 20px;
-					border-radius: 8px;
-					font-size: 14px;
-					z-index: 9999;
-					max-width: 90%;
-					box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-					">
-					本网站使用 Cookie 来改善用户体验。继续浏览表示您已同意我们的
-					<a href="/privacy" style="color: #4fc3f7; text-decoration: underline;">隐私政策</a>。
-					<button id="cookie-accept" style="
-						margin-left: 12px;
-						background: #4fc3f7;
-						border: none;
-						color: white;
-						padding: 6px 12px;
-						border-radius: 4px;
-						cursor: pointer;
-						">我知道了</button>
-				</div>
-				<script>
-				// 检查是否已接受
-  if (!localStorage.getItem("cookieAccepted")) {
-    document.getElementById("cookie-banner").style.display = "block";
-  }
-
-  // 点击按钮后记录
-  document.getElementById("cookie-accept").onclick = function () {
-    localStorage.setItem("cookieAccepted", "yes");
-    document.getElementById("cookie-banner").style.display = "none";
-  };
-</script>
 			</div>
 			<div class="info-box tool-out">
 				<h2 style="flex: none;width: 30px;margin: auto;margin-right: 5px;">导航栏</h2>
@@ -193,6 +153,33 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div id="cookie-banner" style="
+		display: none;
+		position: fixed;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: rgba(0,0,0,0.85);
+		color: #fff;
+		padding: 16px 20px;
+		border-radius: 8px;
+		font-size: 14px;
+		z-index: 9999;
+		max-width: 90%;
+		box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+		">
+		本网站使用 Cookie 来改善用户体验。继续浏览表示您已同意我们的
+		<a href="/privacy" style="color: #4fc3f7; text-decoration: underline;">隐私政策</a>。
+		<button id="cookie-accept" style="
+			margin-left: 12px;
+			background: #4fc3f7;
+			border: none;
+			color: white;
+			padding: 6px 12px;
+			border-radius: 4px;
+			cursor: pointer;
+			">我知道了</button>
 	</div>
 	<img id="background" class="background" src="https://bing.img.run/rand.php" />
 <script src="js/background.js"></script>
