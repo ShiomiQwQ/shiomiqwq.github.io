@@ -80,7 +80,20 @@
 		<div class="info">
 			<div class="info-box weather-box">
 			<div id="he-plugin-standard"></div>
-				<div id="cookie-banner" style="
+				<script>
+					WIDGET = {
+					"CONFIG": {
+						"layout": "1",
+						"width": "450",
+						"height": "150",
+						"background": "5",
+						"dataColor": "000000",
+						"key": "f1cce676a49b466d8774580ba23bce3b"
+					}
+					}
+				<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
+				</script>
+					<div id="cookie-banner" style="
 					display: none;
 					position: fixed;
 					bottom: 20px;
@@ -107,19 +120,6 @@
 						cursor: pointer;
 						">我知道了</button>
 				</div>
-				<script>
-					WIDGET = {
-					"CONFIG": {
-						"layout": "1",
-						"width": "450",
-						"height": "150",
-						"background": "5",
-						"dataColor": "000000",
-						"key": "f1cce676a49b466d8774580ba23bce3b"
-					}
-					}
-				</script>
-				<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
 				<script>
 				// 检查是否已接受
   if (!localStorage.getItem("cookieAccepted")) {
