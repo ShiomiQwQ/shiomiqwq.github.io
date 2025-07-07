@@ -3,7 +3,6 @@ User-agent: *
 Disallow: /jbjfunny/
 Disallow: /douga/
 Disallow: /about_midishow_account/
-Disallow: /privacy/
 
 User-agent: Baiduspider
 Disallow: /
