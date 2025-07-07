@@ -6,6 +6,7 @@ Disallow: /about_midishow_account/
 Disallow: /js/
 Disallow: /css/
 Disallow: /logo/
+Disallow: /privacy/
 
 User-agent: Baiduspider
 Disallow: /
